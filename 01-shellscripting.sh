@@ -7,7 +7,7 @@ name="vedavyas"
 echo "Hi this is $name"
 
 # 2. Conditional Statements
-age=$2
+age=$1
 
 if [ $age -eq 26 ]; then
     echo "approved welcome to devops world"
