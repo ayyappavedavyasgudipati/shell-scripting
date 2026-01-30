@@ -14,3 +14,7 @@ if [ $age -eq 26 ]; then
 else
     echo "You are not approved!"
 fi  
+
+
+
+
