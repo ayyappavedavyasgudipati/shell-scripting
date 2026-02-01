@@ -28,5 +28,7 @@ do
             --instance-ids $INSTANCE_ID \
             --query 'Reservations[].Instances[].PrivateIpAddress' \
             --output text)  
-    fi               
+    fi 
+
+    echo "$IP"              
 done
