@@ -7,7 +7,7 @@ INSTANCE_TYPE="t3.micro"
 
 for INSTANCE in $@
 do
-    INSTANCE_ID=$ (aws ec2 run-instances \
+    INSTANCE_ID=$(aws ec2 run-instances \
     --image-id $AMI_ID \
     --instance-type $INSTANCE_TYPE \
     --key-name $INSTANCE \
