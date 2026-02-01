@@ -28,13 +28,6 @@ do
         IP=$(aws ec2 describe-instances \
             --instance-ids $INSTANCE_ID \
             --query 'Reservations[].Instances[].PrivateIpAddress' \
-            --output text)         
+            --output text)  
+    fi               
 done
-
-
-aws ec2 describe-instances \
-    --instance-ids YOUR_INSTANCE_ID \
-    --query 'Reservations[*].Instances[*].PublicIpAddress' \
-    --output text --region YOUR_AWS_REGION
-
-
