@@ -10,7 +10,6 @@ do
     INSTANCE_ID=$(aws ec2 run-instances \
     --image-id $AMI_ID \
     --instance-type $INSTANCE_TYPE \
-    --key-name $INSTANCE \
     --security-group-ids $SG_ID \
     --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=$INSTANCE}]" \
     --query 'Instances[0].InstanceId' \
