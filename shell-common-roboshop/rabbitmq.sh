@@ -20,6 +20,7 @@ VALIDATE $? "Start RabbitMQ"
 
 rabbitmqctl list_users | grep -w roboshop &>>$LOGS_FILE
 VALIDATE $? "Checking User Already exist or not"
+ 
 if [ $? -ne 0 ]; then
     rabbitmqctl add_user roboshop roboshop123 &>>$LOGS_FILE
     VALIDATE $? "Adding User"
