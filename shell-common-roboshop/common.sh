@@ -106,8 +106,8 @@ SYSTEM_SETUP(){
     systemctl enable $APP_NAME &>>$LOGS_FILE
     VALIDATE $? "Enable $APP_NAME Service " 
 
-    systemctl start catalogue &>>$LOGS_FILE
-    VALIDATE $? "Start Catalogue Service"
+    systemctl start $APP_NAME &>>$LOGS_FILE
+    VALIDATE $? "Start $APP_NAME Service"
 }
 
 APP_RESTART(){
