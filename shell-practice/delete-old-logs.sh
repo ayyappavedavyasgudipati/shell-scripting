@@ -10,7 +10,7 @@ $HOME=$PWD
 
 mkdir -p $DIR
 cd $DIR
-touch -d 20260101 user.log cart.log catalogue.lo
+touch -d 20260101 user.log cart.log catalogue.log
 ls -l
 
 cd $HOME
