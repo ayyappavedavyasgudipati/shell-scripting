@@ -11,6 +11,8 @@ $HOME=$PWD
 mkdir -p $DIR
 cd $DIR
 touch -d 20260101 user.log cart.log catalogue.log
+touch -d 20260102 shipping.log payment.log frontend.log
+touch redis.log mongodb.log mysql.log
 ls -l
 
 cd $HOME
