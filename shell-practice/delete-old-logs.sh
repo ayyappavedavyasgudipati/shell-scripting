@@ -11,6 +11,7 @@ $HOME=$PWD
 mkdir -p $DIR
 cd $DIR
 touch -d 20260101 user.log cart.log catalogue.lo
+ls -l
 
 cd $HOME
 if [ ! -d $DIR ]; then
