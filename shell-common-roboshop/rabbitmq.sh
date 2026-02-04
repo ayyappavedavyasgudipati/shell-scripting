@@ -2,6 +2,7 @@
 
 source ./common.sh
 
+
 CHECK_ROOT
 
 #--------------COMMANDS FOR DEPLOYMENT-----------------#
