@@ -68,7 +68,7 @@ else
         log "Deleting file: $filepath"
         rm -f $filepath
         log "Deleted file: $filepath"
-        MESSAGE+="Deleted Files are: $filepath <br>"
+        MESSAGE+="Deleted logs are: $filepath <br>"
         done <<< $OLD_LOG_FILES
     else
         log "Archeival is ... $R FAILURE $N"
