@@ -11,6 +11,8 @@ SOURCE_DIR=$1
 DEST_DIR=$2
 DAYS=${3:-14} # 14 days is the default value, if the user not supplied
 SOURCE_BASENAME=$(basename "$SOURCE_DIR")
+MESSAGE=""
+IP_ADDRESS=$(curl http://169.254.169.254/latest/meta-data/local-ipv4)
 
 
 log(){
@@ -66,6 +68,7 @@ else
         log "Deleting file: $filepath"
         rm -f $filepath
         log "Deleted file: $filepath"
+        MESSAGE+="Deleted Files are: $filepath <br>"
         done <<< $OLD_LOG_FILES
     else
         log "Archeival is ... $R FAILURE $N"
@@ -74,3 +77,11 @@ else
 fi    
 
 
+echo "$MESSAGE"
+
+sh mail.sh "ayyappavedavyas.gudipati@gmail.com" \
+           "Old Logs Deleted on $IP_ADDRESS" \
+           "$MESSAGE" \
+           "DELETE_LOGS" \
+           "$IP_ADDRESS" \
+           "DevOps Team"
